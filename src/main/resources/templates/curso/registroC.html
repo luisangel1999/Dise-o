@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="fragments/head"></th:block>
+<meta charset="UTF-8">
+<body>
+	<th:block th:include="fragments/navbar"></th:block>
+
+	<div class="container">
+<form th:action="@{/cursos/guardar/registrar}" th:object="${curso}" method="POST">
+<br></br>
+<h1 class="display-3">Registro curso</h1>
+
+  <div class="form-outline mb-4">
+	<textarea type="text" id="form4Example3" class="form-control" name="nombre" th:field="*{nombre}"></textarea>
+	<label class="form-label" for="form4Example3">Nombre Curso</label>
+	<div class="alert alert-danger" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></div>
+  </div>
+  
+  <div class="form-outline mb-4">
+	<textarea type="text" id="form4Example3" class="form-control" name="descripcion" th:field="*{descripcion}"></textarea>
+	<label class="form-label" for="form4Example3">Descripción</label>
+	<div class="alert alert-danger" th:if="${#fields.hasErrors('descripcion')}" th:errors="*{descripcion}"></div>
+  </div>
+
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Registrar</button>
+    <br></br> <br></br>   <br></br> <br></br> 
+</form>
+
+	</div>
+	<th:block th:include="fragments/footer"></th:block>
+	<th:block th:include="fragments/scripts"></th:block>
+
+</body>
+</html>

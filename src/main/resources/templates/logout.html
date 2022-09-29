@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="fragments/head"></th:block>
+<meta charset="UTF-8">
+
+<body style="background-color: #303F9F;">
+	<br></br>
+	<div class="container">
+		<section class="vh-100 w-200 p-3" style="background-color: #303F9F;">
+			<div class="container py-5 h-100">
+				<div
+					class="row d-flex justify-content-center align-items-center h-100">
+					<div class="col col-xl-10">
+						<div class="card" style="border-radius: 1rem;">
+							<div class="row g-0">
+								<div class="col-md-6 col-lg-5 d-none d-md-block">
+									<img
+										src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+										alt="login form" class="img-fluid"
+										style="border-radius: 1rem 0 0 1rem;" />
+								</div>
+								<div class="col-md-6 col-lg-7 d-flex align-items-center">
+									<div class="card-body p-4 p-lg-5 text-black">
+
+										<form th:action="@{/auth/login-post}" method="post">
+
+											<div class="d-flex align-items-center mb-3 pb-1">
+											
+												<img src="../img/imagen-naranja.png" class="img-rounded" alt="Cinque Terre" width="150" height="150">
+													
+												<span class="h1 fw-bold mb-0">Edudemic</span>
+											</div>
+
+											<h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Ingresa
+												con tu cuenta</h5>
+
+											<div class="form-group">
+												<input type="text" name="username" id="username"
+													class="form-control" placeholder="Dni" autofocus required />
+											</div>
+
+											<div class="form-group">
+												<input type="password" name="password" id="password"
+													class="form-control" placeholder="Contraseña" required />
+											</div>
+
+											<div class="form-group">
+												<input type="submit"
+													class="btn btn-lg btn-primary btn-block" value="Ingresar" />
+											</div>
+
+		
+										</form>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+	<br></br>
+	<br></br>
+
+	<th:block th:include="fragments/scripts"></th:block>
+
+</body>
+</html>

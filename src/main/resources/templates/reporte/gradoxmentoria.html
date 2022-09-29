@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<th:block th:include="fragments/head"></th:block>
+<body>
+	<th:block th:include="fragments/navbar"></th:block>
+	
+	<br>
+	</br>
+	
+	<div class="container">
+	 <div class="row justify-content-center">
+	 <form th:action="@{/reporte/lista3}" th:object="${auxiliar}" method="POST" class="form-row">
+	  
+	   <div class="col" style="max-width:25%;">
+	    <label class="colm-md-3">Fecha de Inicio  </label>
+	    <input type="date"   class="form-control colm-md-3" value="2022-12-12" th:field="*{fechaI}" >
+	   </div>
+      <div class="col" style="max-width:25%;">
+	    <label class="colm-md-3">Fecha de Fin  </label>
+	    <input type="date"   class="form-control colm-md-3" th:field="*{fechaF}" > 
+
+	   </div>
+	  <div class="col" style="max-width:25%;">
+	  <form th:action="@{/logout}" method="POST">
+			<button type="submit" class="btn btn-primary mt-3">Filtrar</button>
+		</form>
+	  </div>
+	   </div>
+	</form>
+	 </div>
+	</div>
+	
+		<div class="alert alert-danger alert-dismissable" th:if="${error!=null}">
+	     <label  th:text="${error}"></label> 
+	     <button type="button" class="close" data-dismiss="alert">&times</button>
+	</div>
+	<div class="alert alert-danger alert-dismissable" th:if="${error2!=null}">
+	     <label  th:text="${error2}"></label> 
+	     <button type="button" class="close" data-dismiss="alert">&times</button>
+	</div>
+	<div class="alert alert-danger alert-dismissable" th:if="${error3!=null}">
+	     <label  th:text="${error3}"></label> 
+	     <button type="button" class="close" data-dismiss="alert">&times</button>
+	</div>
+	
+	
+	
+	<div class="card" style="max-width: 100%;">
+		<div class="card-header">Mentorias</div>
+		<div class="card-body">
+
+			<table class="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">Grado</th>
+							<th scope="col">Cantidad de Mentorias</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="reporteGrado:${reporteGrados}">
+							<td th:text="${reporteGrado.grado}"></td>
+							<td th:text="${reporteGrado.cantidad}"></td>				
+						</tr>
+
+					</tbody>
+				</table>
+		</div>
+	</div>
+	<br></br>
+		<br></br>
+	
+	<th:block th:include="fragments/scripts"></th:block>
+	<th:block th:include="fragments/footer"></th:block>
+
+</body>
+</html>

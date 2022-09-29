@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:include ="fragments/head"></th:block>
+<header></header>
+<body>
+	<th:block th:include="fragments/navbar"></th:block>
+	<div class="container">
+		<form th:action="@{'/inscripciones/'+${session.usuario.id}+'?idMentoria='}+${mentoria.id}" th:object="${'inscripcion'+'mentoria'}" method="POST">
+			<h1>Inscripcion a mentoria</h1>	
+  				<div class="card">
+					<div class="card-header">Datos de la mentoria</div>
+					<div class="card-body">
+						<table class="table table-striped">
+							<tr>
+				                <th> id </th>
+				                <td th:text="${mentoria.id} ">	Mark</td>
+			                </tr>
+							<tr>
+				                <th> Profesor </th>
+				                <td th:text="${mentoria.profesor.nombres+' '+ mentoria.profesor.apellidos}">Mark</td>
+			                </tr>
+			                <tr>
+			                	<th> Curso </th>
+			                	<td th:text="${mentoria.profesor.curso.nombre}">Mark</td>
+			                </tr>
+							<tr>
+								<th> Fecha </th>
+								<td th:text="${mentoria.fecha}">Mark</td>
+							</tr>
+							<tr>
+								<th> Hora </th>
+								<td th:text="${mentoria.horaI+'-'+mentoria.horaF}">Mark</td>
+							</tr>
+							<tr>
+								<th> Descripcion </th>
+								<td th:text="${mentoria.descripcion}">Mark</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+  			<br></br>
+  			<br></br>
+			<!-- Submit button -->
+			<button type="submit" class="btn btn-primary btn-block mb-4">Registrar</button>
+			<br></br>
+		</form>
+		<div class="alert alert-danger alert-dismissable" th:if="${mensaje != null}" >
+           <label th:text="${mensaje}"> </label> 
+           <button type="button" class="close" data-dismiss="alert">&times;</button>
+    	</div>
+    </div>
+   
+   <th:block th:include ="fragments/footer"></th:block>
+   <th:block th:include ="fragments/scripts"></th:block>	
+	
+</body>
+</html>

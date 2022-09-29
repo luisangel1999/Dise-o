@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:include ="fragments/head"></th:block>
+<meta charset="UTF-8">
+
+<body>
+	<th:block th:include="fragments/navbar"></th:block>
+	<!--editado x joao-->
+	<div class="container">
+	
+		<form th:action="@{/guardar/mentorias?id=}+${session.usuario.id}" th:object="${mentoria}" method="POST">
+			<h1>Modifica Mentoria</h1>	
+			<div class="form-outline mb-4">
+				<input type="date" id="start" class="form-control" value="2022-07-22" min="1990-01-01" max="2022-12-31" name="fecha" th:field="*{fecha}">
+				<label class="form-label" for="start">Fecha</label>
+				<div class="alert alert-danger" th:if="${#fields.hasErrors('fecha')}" th:errors="*{fecha}"></div> 
+			</div>
+			<div class="form-outline mb-4">
+				<input type="time" id="form6Example4" class="form-control" name="dni" th:field="*{horaI}" /> 
+				<label class="form-label" for="form6Example4">Hora de inicio</label>
+				<div class="alert alert-danger" th:if="${#fields.hasErrors('horaI')}" th:errors="*{horaI}"></div>
+			</div>
+			<div class="form-outline mb-4">
+				<input type="time" id="form6Example4" class="form-control" name="dni" th:field="*{horaF}" /> 
+				<label class="form-label" for="form6Example4">Hora de fin</label>
+				<div class="alert alert-danger" th:if="${#fields.hasErrors('horaF')}" th:errors="*{horaF}"></div>
+			</div>
+			<div class="form-outline mb-4">
+				<textarea type="text" id="form6Example4" class="form-control" name="dni" th:field="*{descripcion}"></textarea>
+				<label class="form-label" for="form6Example4">Descripción</label>
+				<div class="alert alert-danger" th:if="${#fields.hasErrors('descripcion')}" th:errors="*{descripcion}"></div>
+			</div>
+			<!-- Submit button -->
+			<button type="submit" class="btn btn-primary btn-block mb-4">Modificar</button>
+			<br></br>
+		</form>
+		
+		<div th:if="${mensaje}" class="alert alert-danger"><p th:text="${mensaje}"></p></div>
+	</div>
+	
+	<th:block th:include ="fragments/footer"></th:block>
+	<th:block th:include ="fragments/scripts"></th:block>
+	
+</body>
+</html>

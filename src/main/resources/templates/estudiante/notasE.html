@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<th:block th:include="fragments/head"></th:block>
+<meta charset="UTF-8">
+<body>
+	<th:block th:include="fragments/navbar"></th:block>
+
+	<div class="container">
+<br></br>
+		<div class="card">
+			<div class="card-header">Listado de inscripciones del estudiante</div>
+			<div class="card-body">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">Mentoria</th>
+							<th scope="col">Notas</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="inscripcion:${inscripcionE}">
+							<td th:text="${inscripcion.mentoria.id}">@mdo</td>
+							<td><a th:href="@{'/mentoria/estudiante/'+ ${inscripcion.mentoria.id}}"
+								class="btn btn-success">Ver detalle</a></td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<br></br>
+	</div>
+
+	<th:block th:include="fragments/footer"></th:block>
+	<th:block th:include="fragments/scripts"></th:block>
+
+</body>

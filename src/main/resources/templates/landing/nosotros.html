@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Bienvenido a Edudemic</title>
+<link rel="icon" href="favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/landing.css}" />
+</head>
+<body>
+	<!- POSIBLE CAMBIO -->
+	<div class="bg-wn-blue-dark">
+		<header class="header contenedor">
+			<div class="menu">
+				<div class="logo">
+					<a href="index.html"><img src="img/logo.png"
+						alt="logo-tjugo.png" width="200px"></a>
+				</div>
+				<div class="menu-toggle">
+					<img src="img/menu.png" alt="">
+				</div>
+			</div>
+			<nav class="no-show navegacion-principal">
+				<a th:href="@{/landing}">Inicio</a> <a href="nosotros.html">¿Quiénes
+					Somos?</a> <a href="#sec-experiencias">Experiencias</a> <a href="#">Preguntas
+					frecuentes</a> <a href="#">Contacto</a> <a href="#">Ingresa ahora</a>
+			</nav>
+		</header>
+	</div>
+
+	<main>
+		<div class="contenedor">
+			<div class="about">
+				<div class="about-info">
+					<div class="quienes-somos">
+						<h2>¿Quiénes somos?</h2>
+						<div class="parrafos">
+							<p>CoWorkers es un startup creado en el año 2022 por alumnos
+								de la carrera de Ingenieria de Sistemas de Informacion con el
+								fin de desarrollar Edudemic. Lo que busca nuestro startup es
+								proveer una aplicacion web que esta dedicada para estudiantes y
+								profesores.</p>
+
+						</div>
+					</div>
+					<div>
+						<h3>Nuestra mision</h3>
+						<p>Ayudar a estudiantes y profesores a encontrar servicios de
+							clases virtuales con el uso de la tecnologia.</p>
+					</div>
+					<div>
+						<h3>Nuestra vision</h3>
+						<p>Nuestra proyeccion es ser la plataforma preferida de los
+							estudiantes para llevar clases virtuales y para los profesores
+							brindar apoyo en su desarrollo profesional.</p>
+					</div>
+				</div>
+				<div class="about-img">
+					<img src="img/ellos.jpg" alt="Team VC.png">
+					<p class="fuente-negrita">CoWorkers</p>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!- POSIBLE CAMBIO  -->
+	<footer class="bg-wn-blue-dark footer">
+		<div class="contenedor">
+			<div class="navegacion-secundaria">
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Sobre Nosotros</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><a href="nosotros.html">Quienes Somos</a></li>
+					</ul>
+				</div>
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Usuarios</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><a href="index.html">Alumnos</a></li>
+						<li><a href="profesor.html">Profesores</a></li>
+					</ul>
+				</div>
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Descarga</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><img src="img/apple-blanco.png" alt="AppleStore.png">
+							<a target="_blank"
+							href="https://apps.apple.com/us/developer/apple/id284417353">AppStore</a>
+						</li>
+						<li><img src="img/playstore-blanco.png" alt="PlayStore.png">
+							<a target="_blank"
+							href="https://play.google.com/store?hl=es_419&gl=US">PlayStore</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Redes Sociales</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><img src="img/instagram-blanco.png" alt="Instagram.png">
+							<a class="no-show" target="_blank"
+							href="https://www.instagram.com/?hl=es-la"> Síguenos en
+								Instagram </a></li>
+						<li><img src="img/facebook-blanco.png" alt="Facebook.png">
+							<a class="no-show" target="_blank"
+							href="https://www.facebook.com/">Síguenos en Facebook</a></li>
+						<li><img src="img/twitter-blanco.png" alt="Twitter.png">
+							<a class="no-show" target="_blank"
+							href="https://twitter.com/?lang=es"> Siguenos en Twitter </a></li>
+					</ul>
+				</div>
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Ayuda</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><a href="#">Preguntas Frecuentes</a></li>
+					</ul>
+				</div>
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Contacto</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><img src="img/llamada-telefonica-blanco.png"
+							alt="Telefono.png"> <a href="#">+51 985 389 026</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="derechos">
+				<p>Edudemic 2022 | Todos los derechos reservados |
+					info@Edudemic.com</p>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+</html>

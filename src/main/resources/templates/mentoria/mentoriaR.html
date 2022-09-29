@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<th:block th:include="fragments/head"></th:block>
+<body>
+	<th:block th:include="fragments/navbar"></th:block>
+	<div class="card" style="max-width: 100%;">
+		<div class="card-header">Mentorias</div>
+		<div class="card-body">
+
+			<table class="table table-striped">
+					<thead>
+						<tr>
+
+							<th scope="col">Profesor</th>
+							<th scope="col">Curso</th>
+							<th scope="col">Cantidad</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="reporteMentoria:${reporteMentorias}">
+							<td th:text="${reporteMentoria.profesor.nombres}"></td>
+							<td th:text="${reporteMentoria.profesor.curso.nombre}"></td>
+							<td th:text="${reporteMentoria.cantidad}"></td>				
+						</tr>
+
+					</tbody>
+				</table>
+		</div>
+	</div>
+
+	<th:block th:include="fragments/scripts"></th:block>
+	<th:block th:include="fragments/footer"></th:block>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" th:href="@{/css/landing.css}"/>
+<link rel="preconnect" th:href="@{https://fonts.gstatic.com}">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+<title>Edudemic</title>
+</head>
+<body>
+	<div class="bg-wn-blue-dark">
+		<header class="header contenedor">
+			<div class="menu">
+				<div class="logo">
+					<a href="index.html"><img src="img/logo.png"
+						alt="logo-tjugo.png" width="200px"></a>
+				</div>
+				<div class="menu-toggle">
+					<img src="img/menu.png" alt="">
+				</div>
+			</div>
+			<nav class="no-show navegacion-principal">
+				<a href="index.html">Inicio</a> <a th:href="@{/nosotros}">¿Quienes
+					Somos?</a> <a href="#sec-experiencias">Experiencias</a> <a href="#">Plan de trabajo</a> <a href="#foot">Contacto</a> <a th:href="@{/auth/login}">Ingresar</a>
+			</nav>
+		</header>
+	</div>
+
+	<div class="bg-wn-blue-light">
+		<main class="principal contenedor">
+			<div class="principal-imagen">
+				<img class="pantalla-tjugo" src="img/logo.png"
+					alt="tjugo-aplicacion">
+			</div>
+			<div class="principal-banner">
+				<div class="descripcion">
+					<h1>Edudemic</h1>
+					<p>Vive una nueva experiencia de educacion virtual con tus profesores enseñando clases personalizadas</p>
+					<p>La Startup que busca mejorar la educacion</p>
+				</div>
+				<div class="reacciones">
+					<div class="reacion">
+						<img src="img/estrella-llena.svg" type="svg" alt="estrella.svg"
+							width="30px"> <img src="img/estrella-llena.svg"
+							alt="estrella.svg" width="30px"> <img
+							src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<p>" Increible "</p>
+					</div>
+					<div class="reacion">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<p>" Fantastico "</p>
+					</div>
+					<div class="reacion">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						<p>" Impresionante "</p>
+					</div>
+				</div>
+				<div class="align-txt-center">
+					<a class="boton" href="#">Contrata Ahora</a>
+					<p>¡Empieze a aprender hoy con Edudemic!</p>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<div class="border-botton">
+		<section class="usar-tjugo contenedor">
+			<div class="usar-tjugo-contenido">
+				<h2>Como es utilizar edudemic</h2>
+				<div class="pasos">
+					<div class="paso">
+						<p class="paso_numero">1</p>
+						<img src="img/lapiz.svg" alt="lapiz.svg" width="40px">
+						<div class="paso__informacion">
+							<h3>Busca clases</h3>
+							<p>Busca mentorias virtuales.</p>
+						</div>
+					</div>
+					<div class="paso">
+						<p class="paso_numero">2</p>
+						<img src="img/usuario.svg" alt="usuario.svg" width="40px">
+						<div class="paso__informacion">
+							<h3>Elige</h3>
+							<p>Elige tu profesor.</p>
+						</div>
+					</div>
+					<div class="paso">
+						<p class="paso_numero">3</p>
+						<img src="img/ganador.svg" alt="ganador.svg" width="40px">
+						<div class="paso__informacion">
+							<h3>Aprende</h3>
+							<p>Accede a tus clases y empieza a aprender.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<section id="sec-experiencias">
+		<div class="contenedor">
+			<div class="experiencias-tjugo">
+				<h2>Experiencias</h2>
+				<div class="experiencias">
+					<div class="experiencia">
+						<img src="https://picsum.photos/seed/1/300/300" alt="imagen-1">
+						<div class="experiencia-info">
+							<p>Javier Mendez</p>
+							<p>Me encanta el servicio.</p>
+						</div>
+						<div class="experiencia-star">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+						</div>
+					</div>
+					<div class="experiencia">
+						<img src="https://picsum.photos/seed/2/300/300" alt="imagen-2">
+						<div class="experiencia-info">
+							<p>Rogger Barrientos</p>
+							<p>Me sirve tener muchas opciones para elegir.</p>
+						</div>
+						<div class="experiencia-star">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-vacia.svg" alt="estrella.svg" width="30px">
+						</div>
+					</div>
+					<div class="experiencia">
+						<img src="https://picsum.photos/seed/3/300/300" alt="imagen-3">
+						<div class="experiencia-info">
+							<p>Rodrigo Peña</p>
+							<p>Buenos profesores.</p>
+						</div>
+						<div class="experiencia-star">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-vacia.svg" alt="estrella.svg" width="30px">
+						</div>
+					</div>
+					<div class="experiencia">
+						<img src="https://picsum.photos/seed/4/300/300" alt="imagen-4">
+						<div class="experiencia-info">
+							<p>Milagros Espinoza</p>
+							<p>Es muy sencillo y no tuve ningún problema.</p>
+						</div>
+						<div class="experiencia-star">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-vacia.svg" alt="estrella.svg" width="30px">
+						</div>
+					</div>
+					<div class="experiencia">
+						<img src="https://picsum.photos/seed/5/300/300" alt="imagen-5">
+						<div class="experiencia-info">
+							<p>Enrique Stewart</p>
+							<p>Tuve un problema técnico y me lo solucionaron de
+								inmediato.</p>
+						</div>
+						<div class="experiencia-star">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-vacia.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-vacia.svg" alt="estrella.svg" width="30px">
+						</div>
+					</div>
+					<div class="experiencia">
+						<img src="https://picsum.photos/seed/6/300/300" alt="imagen-6">
+						<div class="experiencia-info">
+							<p>Yessi Benduzú</p>
+							<p>Profesores reponsables y reponden cualquier consulta.</p>
+						</div>
+						<div class="experiencia-star">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-llena.svg" alt="estrella.svg" width="30px">
+							<img src="img/estrella-vacia.svg" alt="estrella.svg" width="30px">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="invitacion-tjugo bg-wn-blue-light">
+		<h2>¡Unete a la comunidad de Edudemic y comienza a aprender!</h2>
+		<a class="boton" href="#">Contratar Ahora</a>
+	</section>
+
+	<footer id="foot" class="bg-wn-blue-dark footer">
+		<div class="contenedor">
+			<div class="navegacion-secundaria">
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Sobre Nosotros</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><a href="nosotros.html">Quienes Somos</a></li>
+					</ul>
+				</div>
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Usuarios</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><a href="index.html">Colegios</a></li>
+						<li><a href="profesor.html">Profesores</a></li>
+					</ul>
+				</div>
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Descarga</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><img src="img/apple-blanco.png" alt="AppleStore.png">
+							<a target="_blank"
+							href="https://apps.apple.com/us/developer/apple/id284417353">AppStore</a>
+						</li>
+						<li><img src="img/playstore-blanco.png" alt="PlayStore.png">
+							<a target="_blank"
+							href="https://play.google.com/store?hl=es_419&gl=US">PlayStore</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Redes Sociales</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><img src="img/instagram-blanco.png" alt="Instagram.png">
+							<a class="no-show" target="_blank"
+							href="https://www.instagram.com/?hl=es-la"> Síguenos en
+								Instagram </a></li>
+						<li><img src="img/facebook-blanco.png" alt="Facebook.png">
+							<a class="no-show" target="_blank"
+							href="https://www.facebook.com/">Síguenos en Facebook</a></li>
+						<li><img src="img/twitter-blanco.png" alt="Twitter.png">
+							<a class="no-show" target="_blank"
+							href="https://twitter.com/?lang=es"> Siguenos en Twitter </a></li>
+					</ul>
+				</div>
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Ayuda</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><a href="#">Preguntas Frecuentes</a></li>
+					</ul>
+				</div>
+				<div class="nav-seccion">
+					<div class="nav-seccion-title">
+						<p>Contacto</p>
+					</div>
+					<ul class="nav-seccion-links">
+						<li><img src="img/llamada-telefonica-blanco.png"
+							alt="Telefono.png"> <a href="#">+51 985 389 026</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="derechos">
+				<p>Edudemic 2022 | Todos los derechos reservados |
+					info@edudemic.com</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

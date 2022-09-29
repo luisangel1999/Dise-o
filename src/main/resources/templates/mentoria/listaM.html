@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<th:block th:include="fragments/head"></th:block>
+<meta charset="UTF-8">
+<body>
+	<th:block th:include="fragments/navbar"></th:block>
+
+	<div class="container">
+<br></br>
+<!--editado x joao-->
+		<div class="card">
+			<div class="card-header">Listado de mentorias</div>
+			<div class="card-body">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">Id</th>
+							<th scope="col">Fecha</th>
+							<th scope="col">Hora de inicio</th>
+							<th scope="col">Hora de fin</th>
+							<th scope="col">Modificar</th>
+							<th scope="col">Eliminar</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="mentoria:${mentorias}">
+							<td th:text="${mentoria.id}">Mark</td>
+							<td th:text="${mentoria.fecha}">@mdo</td>
+							<td th:text="${mentoria.horaI}">@mdo</td>
+							<td th:text="${mentoria.horaF}">@mdo</td>
+							<td><a th:href="@{/modificar/mentoria?id=}+${mentoria.id}" class="btn btn-primary">Modificar</td>
+							<td><a th:href="@{'/borrar/mentoria/'+${session.usuario.id}+'?idMentoria='}+${mentoria.id}" class="btn btn-danger">Eliminar</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<br></br>
+	</div>
+
+	<th:block th:include="fragments/footer"></th:block>
+	<th:block th:include="fragments/scripts"></th:block>
+
+</body>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<th:block th:include="fragments/head"></th:block>
+<meta charset="UTF-8">
+<body>
+	<th:block th:include="fragments/navbar"></th:block>
+
+	<div class="container">
+				
+		<form th:action="@{/estudiantes}" th:object="${estudiante}"
+			method="POST">
+			<br></br>
+			<h1 class="display-3">Nuevo estudiante</h1>
+			<!-- 2 column grid layout with text inputs for the first and last names -->
+			<div class="row mb-4">
+				<div class="col">
+					<div class="form-outline">
+						<input type="text" id="form6Example1" class="form-control"
+							name="nombres" th:field="*{nombres}"  />
+							
+							
+							
+							 <label class="form-label" for="form6Example1">Nombres</label>
+					</div>
+					<div th:if="${#fields.hasErrors('nombres')}" class="alert alert-danger"
+						role="alert">
+						<div th:each="err : ${#fields.errors('nombres')}" th:text="${err}"></div>
+					</div>
+					
+				</div>
+				<div class="col">
+					<div class="form-outline">
+						<input type="text" id="form6Example2" class="form-control"
+							name="apellidos" th:field="*{apellidos}"  />
+							
+							 <label
+							class="form-label" for="form6Example2">Apellidos</label>
+					</div>
+					<div th:if="${#fields.hasErrors('apellidos')}" class="alert alert-danger"
+						role="alert">
+						<div th:each="err2 : ${#fields.errors('apellidos')}" th:text="${err2}"></div>
+					</div>
+						
+				</div>
+			</div>
+
+			<!-- Text input -->
+			<div class="form-outline mb-4">
+				<input type="text" id="form6Example3" class="form-control"
+					name="edad" th:field="*{edad}" /> <label class="form-label"
+					for="form6Example3">Edad</label>
+			</div>
+			<div class="alert alert-danger alert-dismissable" th:if="${error3!=null}">
+	     <label  th:text="${error3}"></label> 		</div>
+					
+			<!-- Text input -->
+			<div class="form-outline mb-4">
+				<input type="text" id="form6Example4" class="form-control"
+					name="dni" th:field="*{dni}" />
+						 <label class="form-label"
+					for="form6Example4">Dni</label>
+			</div>
+			<div th:if="${#fields.hasErrors('dni')}" class="alert alert-danger"
+						role="alert">
+						<div th:each="err4 : ${#fields.errors('dni')}" th:text="${err4}"></div>
+					</div>	
+					<div class="alert alert-danger alert-dismissable" th:if="${error4!=null}">
+	     <label  th:text="${error4}"></label> 		</div>
+			
+			<div class="form-outline mb-4">
+  				<input type="password" id="typePassword" class="form-control" th:field="*{password}"/>
+ 				 <label class="form-label" for="typePassword">Contraseña</label>
+			</div>
+				<div th:if="${#fields.hasErrors('password')}" class="alert alert-danger"
+						role="alert">
+						<div th:each="err5 : ${#fields.errors('password')}" th:text="${err5}"></div>
+					</div>	
+			<div class="alert alert-danger alert-dismissable" th:if="${error2!=null}">
+	     <label  th:text="${error2}"></label> 		</div>
+					
+					
+				
+			<div class="form-outline mb-4">
+				<label class="form-label" for="lista">Grado</label> <select
+					class="custom-select custom-select-sm " name="grado" id="lista">
+					<option th:each="grado :${listagrado}" th:value="${grado}"
+						th:text="${grado}" />
+				</select>
+			</div>
+				
+				
+
+			<!-- Submit button -->
+			<button type="submit" class="btn btn-primary btn-block mb-4">Registrar</button>
+
+			
+			
+			<div class="alert alert-danger alert-dismissable" th:if="${error!=null}">
+	     <label  th:text="${error}"></label> 
+	</div>
+<br></br>
+		</form>
+	</div>
+
+	<th:block th:include="fragments/footer"></th:block>
+	<th:block th:include="fragments/scripts"></th:block>
+
+</body>
