@@ -128,14 +128,14 @@ public class EstudianteController {
 
 		if(estudianteService.ValidarCamposVacios(estudiante)==1||result.hasErrors())
 	     {
-			if(estudianteService.ValidarCamposVacios(estudiante)==1)
-			model.addAttribute("error", "Debe completar todos los campos");
+			//if(estudianteService.ValidarCamposVacios(estudiante)==1)
+			//model.addAttribute("error", "Debe completar todos los campos");
 			
 			/*f(estudianteService.ValidarContra(estudiante)==1)
 				model.addAttribute("error2", "Contraseña no es válida");*/
 			
-			if(estudianteService.ValidarEdad(estudiante)==1)
-				model.addAttribute("error3", "Edad inválida");
+		//	if(estudianteService.ValidarEdad(estudiante)==1)
+			//	model.addAttribute("error3", "Edad inválida");
 			
 			/*if(usuarioService.validar(estudiante.getDni()))
 			{
