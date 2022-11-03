@@ -127,25 +127,20 @@ public class ReporteMentoriaService {
 		String Fpart3 = parts2[2];
 		int diaF = Integer.parseInt(Fpart3);
 		
-		
 		if(añoF<añoI)
 		{
 			validar=1;
-			
 		}
-		else {
-			
+		else if(añoF==añoI)
+		{
 			if(mesF<mesI)
+			validar=1;
+			else if(mesF==mesI)
 			{
-				validar=1;
-			}
-			else {
-				
 				if(diaF<diaI)
 					validar=1;
-				
-			}
 			
+			}
 		}
 		
 		

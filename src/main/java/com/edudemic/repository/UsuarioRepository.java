@@ -9,5 +9,7 @@ import com.edudemic.entities.Usuario;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 	@Query("FROM Usuario u  WHERE u.dni=?1")
 	 Usuario findByDni(String dni);
+	
+	
 	 
 }

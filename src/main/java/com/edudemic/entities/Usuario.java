@@ -51,7 +51,7 @@ public class Usuario {
 	//@Pattern(regexp = "[a-zA-Z0-9]", message = "Contraseña no válida")
 	private String password;
 	
-	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@ManyToOne//(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "rol_id")
 	private Rol rol;
 	public Long getId() {

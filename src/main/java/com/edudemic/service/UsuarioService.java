@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.edudemic.entities.Usuario;
 import com.edudemic.repository.UsuarioRepository;
+import com.edudemic.repository.EstudianteRepository;
 
 @Service
 public class UsuarioService {
@@ -29,7 +30,9 @@ public class UsuarioService {
 		}else 
 		{
 			return false;
-
 		}
+	}
+	public void deleteUsuarioById(Long id) {
+		usuarioRepository.deleteById(id);
 	}
 }

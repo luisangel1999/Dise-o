@@ -8,29 +8,28 @@
 
 	<div class="container">
 
-		<form th:action="@{/estudiante/guardar}" th:object="${estudiante}" th:method="POST">
+		<form th:action="@{/profesor/guardar}" th:object="${profesor}" th:method="POST">
 			<br></br>
-			<h1 class="display-3">Modificar Estudiante</h1>
+			<h1 class="display-3">Modificar profesor</h1>
 			
 				<div class="form-group">
 						<input type="hidden" class="form-control" th:field="*{id}" />
 					</div>
 					
 					<div class="form-group">
-						<label for="nombre">Nombres:</label> <input type="text"
+						<label for="nombre">Nombres</label> <input type="text"
 							class="form-control" id="nombres" aria-describedby="nombres"
 							th:field="*{nombres}" placeholder=" " />
 							
-							
+						
 					</div>
 					<div th:if="${#fields.hasErrors('nombres')}" class="alert alert-danger"
 						role="alert">
 						<div th:each="err : ${#fields.errors('nombres')}" th:text="${err}"></div>
 					</div>
 					
-					
-                   <div class="form-group">
-						<label for="nombre">Apellidos:</label> <input type="text"
+<div class="form-group">
+						<label for="nombre">Apellidos</label> <input type="text"
 							class="form-control" id="apellidos" aria-describedby="apellidos"
 							th:field="*{apellidos}" placeholder=" " />
 							
@@ -42,59 +41,54 @@
 					</div>
 					
 					<div class="form-group">
-						<label for="nombre">Edad:</label> <input type="text"
-							class="form-control" id="apellidos" aria-describedby="edad"
+						<label for="nombre">Edad</label> <input type="text"
+							class="form-control" id="edad" aria-describedby="edad"
 							th:field="*{edad}" placeholder=" " />
+							
 							
 					</div>		
 					<div class="alert alert-danger alert-dismissable" th:if="${error3!=null}">
 	     <label  th:text="${error3}"></label> 		</div>
 					
 					<div class="form-group">
-						<label for="nombre">DNI:</label> <input type="text"
-							class="form-control" id="apellidos" aria-describedby="dni"
+						<label for="nombre">Dni</label> <input type="text"
+							class="form-control" id="dni" aria-describedby="dni"
 							th:field="*{dni}" placeholder=" " />
 							
 					</div>
-					
 					<div th:if="${#fields.hasErrors('dni')}" class="alert alert-danger"
 						role="alert">
 						<div th:each="err4 : ${#fields.errors('dni')}" th:text="${err4}"></div>
 					</div>	
 					
 					<div class="form-group">
-						<label for="nombre">Contraseña:</label> <input type="text"
-							class="form-control" id="apellidos" aria-describedby="dni"
+						<label for="nombre">Password</label> <input type="text"
+							class="form-control" id="password" aria-describedby="password"
 							th:field="*{password}" placeholder=" " />
 							
+							
 					</div>
-					
 					<div class="alert alert-danger alert-dismissable" th:if="${error2!=null}">
 	     <label  th:text="${error2}"></label> 		</div>
-					
 					<div class="form-outline mb-4">
-				<label class="form-label" for="lista">Grado</label> <select
-					class="custom-select custom-select-sm " name="grado" id="lista">
-					<option th:each="grado :${listagrado}" th:value="${grado}"
-						th:text="${grado}" th:field="*{grado}" />
+				<label class="form-label" for="lista">Cursos</label> <select
+					class="custom-select custom-select-sm " name="curso" id="lista">
+					<option th:each="curso :${listaCursos}" th:value="${curso.id}"
+						th:text="${curso.nombre}" />
 				</select>
 			</div>
+					
+						
 					
 				<div class="form-group row">						
 						<div class="col-sm-6">
 							<input type="submit" value="MODIFICAR" class="btn btn-primary"></input> 							
 						</div>
 					</div>	
-					
-
-			<a th:href="@{/lista/estudiante}" class="btn btn-primary">Regresar</a>
-			
-			<div class="alert alert-danger alert-dismissable" th:if="${error!=null}">
+<div class="alert alert-danger alert-dismissable" th:if="${error!=null}">
 	     <label  th:text="${error}"></label> 
-			<p th:text="${mensaje}" class="form-text text-success"></p>
 		
-					</div>
-
+			<p th:text="${mensaje}" class="form-text text-success"></p>
 
 			<br></br>
 

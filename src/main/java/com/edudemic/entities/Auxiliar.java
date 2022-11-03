@@ -14,6 +14,7 @@ public class Auxiliar {
 		return fechaI;
 	}
 
+	
 	public void setFechaI(String fechaI) {
 		this.fechaI = fechaI;
 	}

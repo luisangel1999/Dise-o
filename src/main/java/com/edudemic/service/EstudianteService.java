@@ -117,5 +117,8 @@ public class EstudianteService {
 		
 		return validar;
 	}
+    public void deleteEstudianteById(Long id) {
+		estudianteRepository.deleteById(id);
+	}
     
 }

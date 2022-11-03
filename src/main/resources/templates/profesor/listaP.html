@@ -9,15 +9,14 @@
 	<div class="container">
 <br></br>
 		<div class="card">
-			<div class="card-header">Listado de Profesores</div>
+			<div class="card-header">Listado de profesores</div>
 			<div class="card-body">
 				<table class="table table-striped">
 					<thead>
 						<tr>
-
 							<th scope="col">Nombre</th>
 							<th scope="col">Apellidos</th>
-							<th scope="col">DNI</th>
+							<th scope="col">Dni</th>
 							<th scope="col">Curso</th>
 						</tr>
 					</thead>
@@ -27,9 +26,8 @@
 							<td th:text="${profesor.apellidos}">@mdo</td>
 							<td th:text="${profesor.dni}">@mdo</td>
 							<td th:text="${profesor.curso.nombre}">@mdo</td>
-							
-							<td><a 
-									class="btn btn-success">Modificar</a></td>
+							<td><a th:href="@{'/profesor/edit/'+ ${profesor.id}}"
+                                class="btn btn-primary">Modificar</a></td>
 							<td><a 
 									class="btn btn-danger">Eliminar</a></td>
 

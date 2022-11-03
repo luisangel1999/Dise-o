@@ -36,6 +36,11 @@ public class ProfesorService {
 		return profesorRepository.findById(id).get();
 	}
 	
+	 public Profesor editarProfesor(Profesor e) 
+	    {
+	        return profesorRepository.save(e);
+	    }
+	
 	 public int ValidarCamposVacios(Profesor profesor)
 	    {
 	    	int validar=0;
@@ -46,6 +51,58 @@ public class ProfesorService {
 
 	    	return validar;
 	    }
+	 
+	 
+	 public int ValidarNombres(Profesor profesor)
+	    {
+	    	int validar=0;
+	    	int auxiliar=0;
+	    	int auxiliar2=0;
+	    	int auxiliar3=0;
+	    	int auxiliar4=0;
+	    	
+	    	for(int i=0; i<profesor.getNombres().length();i++)
+	    	{
+	    		for(int j=0;j<10;j++)
+	    		{ if( profesor.getNombres().charAt(i)>=(char)48 && profesor.getNombres().charAt(i)<=(char)57)
+	    			{
+	    			auxiliar=0;
+	    			
+	    			}
+	    		  else
+	    		  {
+	    			  auxiliar=1;
+	    			  break;
+	    		  }
+	    		}
+	    		
+	    		
+	    	}
+	    	for(int m=0; m<profesor.getNombres().length();m++)
+	    	{
+	    		
+	    		if(((int)profesor.getNombres().charAt(m)>=65&&(int)profesor.getNombres().charAt(m)<=90)
+	    				|| ((int)profesor.getNombres().charAt(m)>=97||(int)profesor.getNombres().charAt(m)<=122))
+	    			{
+	    			auxiliar2=0;
+	    			}
+	    		else {
+	    			auxiliar2=1;
+	    			break;
+	    		}
+	    	}
+	    	
+	    	
+	    	
+	    	if(profesor.getNombres().length()>40 )
+	    	{
+	    		validar=1;
+	    		
+	    	}
+	    
+	    	return validar;
+	    }
+	  
 	 
 	 public int ValidarEdad(Profesor profesor)
 	    {
@@ -65,5 +122,10 @@ public class ProfesorService {
 			
 			
 			return validar;
+		}
+	    
+	    
+	    public void deleteProfesorById(Long id) {
+			profesorRepository.deleteById(id);
 		}
 }
