@@ -30,7 +30,7 @@
 							<td th:text="${mentoria.horaI}">@mdo</td>
 							<td th:text="${mentoria.horaF}">@mdo</td>
 							<td><a th:href="@{/modificar/mentoria?id=}+${mentoria.id}" class="btn btn-primary">Modificar</td>
-							<td><a th:href="@{'/borrar/mentoria/'+${session.usuario.id}+'?idMentoria='}+${mentoria.id}" class="btn btn-danger" style="text-transform: unset !important">Eliminar</td>
+							<td><a th:href="@{'/borrar/mentoria/'+${session.usuario.id}+'?idMentoria='}+${mentoria.id}" class="btn btn-danger">Eliminar</td>
 						</tr>
 					</tbody>
 				</table>

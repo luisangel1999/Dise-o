@@ -20,7 +20,7 @@
 			<div sec:authorize="hasRole('ROLE_STUDENT')">
 
 				<li class="nav-item"><a class="nav-link"
-					th:href="@{/listar/mentoria/estudiante}">Mentoria</a></li>
+					th:href="@{/listar/mentoria/estudiante}">Mentorias</a></li>
 			</div>
 			
 
@@ -92,7 +92,7 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" th:href="@{/registro/mentoria}">Registrar</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" th:href="@{/listar/mentoria?id=}+${session.usuario.id}">Listar</a>
+						<a class="dropdown-item" th:href="@{/listar/mentoria?id=}+${session.usuario.id}">Mis mentorias</a>
 						<div class="dropdown-divider"></div>
 					</div></li>
 			</div>

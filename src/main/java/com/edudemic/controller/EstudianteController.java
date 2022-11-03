@@ -204,7 +204,7 @@ public class EstudianteController {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		return "estudiante/editarE";
+		return "redirect:/lista/estudiante";
 		
 	
 	}

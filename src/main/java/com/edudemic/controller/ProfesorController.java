@@ -156,7 +156,7 @@ public class ProfesorController {
 		model.addAttribute("listaCursos",listaCursos);
 		
 
-		return "profesor/editarP";}
+		return "redirect:/lista/profesor";}
 	
 	}
 	
