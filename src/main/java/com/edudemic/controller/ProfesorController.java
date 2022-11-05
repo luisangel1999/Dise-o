@@ -154,9 +154,11 @@ public class ProfesorController {
 	}
 		this.listaCursos = cursoService.listarCurso();
 		model.addAttribute("listaCursos",listaCursos);
-		
+		return "profesor/editarP";
 
-		return "redirect:/lista/profesor";}
+		// por si no sale    return "redirect:/lista/profesor";
+		
+		}
 	
 	}
 	
@@ -171,7 +173,8 @@ public class ProfesorController {
 	@GetMapping("/profesor/delete/{id}")
 	public String deleteProfesor(@PathVariable Long id) {
 		profesorService.deleteProfesorById(id);
-		return "profesor/listaP";
+		return "redirect:/lista/profesor";
+		//return "profesor/listaP";
 	}
 	
 }

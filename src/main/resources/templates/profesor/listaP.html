@@ -28,8 +28,10 @@
 							<td th:text="${profesor.curso.nombre}">@mdo</td>
 							<td><a th:href="@{'/profesor/edit/'+ ${profesor.id}}"
                                 class="btn btn-primary">Modificar</a></td>
-							<td><a 
-									class="btn btn-danger">Eliminar</a></td>
+							
+							
+							<td><a th:href="@{'/profesor/delete/'+ ${profesor.id}}"
+								class="btn btn-danger">Eliminar</a></td>
 
 
 						</tr>

@@ -84,7 +84,11 @@
 						<div class="col-sm-6">
 							<input type="submit" value="MODIFICAR" class="btn btn-primary"></input> 							
 						</div>
-					</div>	
+					</div>
+					
+					<a th:href="@{/lista/profesor}" class="btn btn-primary">Regresar</a>
+					
+						
 <div class="alert alert-danger alert-dismissable" th:if="${error!=null}">
 	     <label  th:text="${error}"></label> 
 		
