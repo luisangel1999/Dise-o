@@ -20,7 +20,7 @@ public class Curso {
 	@Column(name = "nombre", nullable = false, length = 25)
 	private String nombre;
 	
-	@Size(max = 500, message = "Limite de 500 caracteres permitidos")
+	@Size(max = 500, message = "Limite de 500 caracteres")
 	@Column(name = "descripcion", nullable = true, length = 500)
 	private String descripcion;
 
